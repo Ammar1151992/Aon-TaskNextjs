@@ -76,7 +76,7 @@
   .loader::before {
     content: '';  
     position: absolute;
-    left: 635px;
+    left: 625px;
     margin-top: 8px;
     width: 30px;
     height: 30px;
@@ -112,6 +112,6 @@
 
 @media screen and (max-width: 700px){
   .loader::before {
-    left: 110px;
+    left: 120px;
   }
 }
