@@ -1,0 +1,19 @@
+.nav{
+    border-bottom: 1px solid #a3a3a3;
+}
+
+.nav .nav_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+
+.nav .nav_content ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav .nav_content ul .li{
+    color: black;
+}

@@ -1,0 +1,46 @@
+.nav{
+    background-color: #EEEEEE;
+}
+
+.nav .nav_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.nav .nav_content p{
+    color: #000;
+}
+
+.nav .nav_content .icon{
+    font-size: 32px;
+}
+
+.nav .nav_content .icon .ic{
+    margin-left: 12px;
+}
+
+@media screen and (max-width: 700px){
+    .nav .nav_content{
+        position: relative;
+        display: block;
+        height: 200px;
+    }
+.nav .nav_content p{
+    position: absolute;
+    width: 100%;
+   margin-top: 120px;
+    text-align: center;
+}
+
+.nav .nav_content .icon {
+    text-align: center;
+}
+
+.nav .nav_content .icon .ic{
+    margin-top: 70px;
+}
+
+  }
+
