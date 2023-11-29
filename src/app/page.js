@@ -12,6 +12,8 @@ export default function Home() {
   const [lists, setLists] = useState([]);
   const [loading, setLoading] = useState(true);
   const [skip, setSkip] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+
 
   const fetchMoreData = async () => {
     try {
@@ -39,7 +41,28 @@ export default function Home() {
   
     useEffect(() => {
       list();
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
     }, []);
+
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+  
+    const scrollToTop = () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    };
+  
   return (
     <main>
       <Nav />
@@ -62,9 +85,13 @@ export default function Home() {
       </Container>
       <span className={loading? styles.loader : styles.non}>L &nbsp; ading...</span>
       <p className={loading? styles.hgh : styles.non}></p>
+      <button
+      className={`scroll_button ${isVisible ? 'visible' : ''}`}
+      onClick={scrollToTop}
+    >
+      ↑
+    </button>
       <Footer />
-      
-     
     </main>
   )
 }

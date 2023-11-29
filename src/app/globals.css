@@ -5,3 +5,20 @@
   list-style: none;
   font-family: sans-serif;
 }
+
+.scroll_button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #a2a2a2;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+.scroll_button.visible {
+  display: block;
+}
