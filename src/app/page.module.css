@@ -30,7 +30,7 @@
 .loader::before {
   content: '';  
   position: absolute;
-  left: 625px;
+  left: 615px;
   margin-top: 8px;
   width: 30px;
   height: 30px;
@@ -58,6 +58,6 @@
   }
 
   .loader::before {
-    left: 110px;
+    left: 120px;
   }
 }
